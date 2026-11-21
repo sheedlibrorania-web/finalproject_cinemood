@@ -1,0 +1,10 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#33FFFFFF">
+    <item>
+        <selector android:enterFadeDuration="180" android:exitFadeDuration="180">
+            <item android:state_enabled="false"><shape><solid android:color="@android:color/transparent"/><corners android:radius="16dp"/></shape></item>
+            <item android:state_hovered="true"><shape><solid android:color="#252D40"/><corners android:radius="16dp"/></shape></item>
+            <item android:state_focused="true"><shape><solid android:color="#252D40"/><corners android:radius="16dp"/></shape></item>
+            <item><shape><solid android:color="@android:color/transparent"/><corners android:radius="16dp"/></shape></item>
+        </selector>
+    </item>
+</ripple>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="mood_brand">◉  CINEMOOD   /   THE MOOD EDIT</string>
+    <string name="mood_title">Pick your\nplot twist.</string>
+    <string name="mood_intro">Type how you feel for a film to match, pick a vibe, or browse them all.</string>
+    <string name="mood_search_label">SEARCH BY MOOD</string>
+    <string name="mood_search_hint">Try upbeat, cozy or curious</string>
+    <string name="mood_search_action">Search moods</string>
+    <string name="mood_search_clear">Clear</string>
+    <string name="mood_no_matches_title">Still finding your vibe?</string>
+    <string name="mood_no_matches_hint">No mood match yet. Try upbeat, smitten, amped, spooked, intrigued, chill or wistful.</string>
+    <plurals name="mood_recommendation_count">
+        <item quantity="one">%d film to explore</item>
+        <item quantity="other">%d films to explore</item>
+    </plurals>
+    <string name="mood_optional_label">THE VIBE (OPTIONAL)</string>
+    <string name="mood_happy">Upbeat</string>
+    <string name="mood_romantic">Smitten</string>
+    <string name="mood_excited">Amped</string>
+    <string name="mood_scared">Spooked</string>
+    <string name="mood_curious">Intrigued</string>
+    <string name="mood_relaxed">Chill</string>
+    <string name="mood_sad">Wistful</string>
+    <string name="mood_any">Anything</string>
+    <string name="mood_all_movies">All stories. Any mood.</string>
+    <string name="mood_edit_heading">Your edit: %1$s</string>
+    <string name="mood_back">←  Back to my space</string>
+</resources>
