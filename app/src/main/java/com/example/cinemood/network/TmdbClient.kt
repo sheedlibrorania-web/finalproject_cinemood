@@ -27,6 +27,7 @@ class TmdbSettings(context: Context) {
 /** Inject a transport in tests; no token is sent anywhere except the fixed TMDB API host. */
 class TmdbClient(
     private val token: String,
+    private val connectionFactory: (URL) -> HttpURLConnection = { it.openConnection() as HttpURLConnection },
     private val transport: ((String, String) -> String)? = null
 ) {
     fun search(query: String): List<Movie> {
@@ -49,7 +50,7 @@ class TmdbClient(
             "${it.key}=${URLEncoder.encode(it.value, "UTF-8")}" }
         val address = "https://api.themoviedb.org/3/$path?$query"
         if (transport != null) return transport.invoke(address, token)
-        val connection = URL(address).openConnection() as HttpURLConnection
+        val connection = connectionFactory(URL(address))
         return try {
             connection.connectTimeout = 12000; connection.readTimeout = 12000
             connection.setRequestProperty("Authorization", "Bearer $token")
