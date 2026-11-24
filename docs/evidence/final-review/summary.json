@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-25",
+  "timezone": "Asia/Manila",
+  "baseline": "e060a21",
+  "branch": "docs/final-manual-and-testing",
+  "device": "Pixel 10a emulator / Android 17 API 37.1",
+  "instrumentation": {
+    "runner_result": "OK (40 tests)",
+    "failures": 0,
+    "caveat": "Includes one phase-gated processRestartCheckpoint with no separate restart phases; not evidence of a two-process restart."
+  },
+  "unit_tests": "10 existing passing results; task up-to-date in this build, not freshly executed",
+  "lint": {
+    "debug": {
+      "errors": 0,
+      "warnings": 8
+    },
+    "release": {
+      "errors": 0,
+      "warnings": 8
+    }
+  },
+  "builds": "Debug, debug test APK and unsigned release assembled successfully",
+  "pending": [
+    "Mark independent clean setup",
+    "Current final team-signed release APK acceptance",
+    "API24 runtime and full accessibility/performance matrix"
+  ],
+  "capture_refinement": {
+    "initial_refinement": "Failed: test harness cast platform ScrollView instead of existing AndroidX NestedScrollView; corrected without app changes.",
+    "final_targeted_result": "OK (1 test)",
+    "screenshots": 11
+  }
+}
