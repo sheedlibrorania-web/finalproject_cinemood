@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-25",
+  "suite": "AutomaticLiveAccessTest",
+  "tests": 1,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "cases": [
+    "com.example.cinemood.AutomaticLiveAccessTest.searchWorksWithoutDeviceTokenSetup"
+  ],
+  "method": "Real TMDB search and actual SearchActivity results; temporary account cleaned up by test."
+}

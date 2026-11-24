@@ -99,3 +99,10 @@ Use focused branches, meaningful commits under each contributor’s own identity
 - [Software Requirements Specification](docs/SRS.md) — current scope and acceptance criteria; approval pending.
 - [Course compliance register](docs/CS0053_COMPLIANCE.md) — evidence links, responsibilities and remaining gaps.
 - [Development tools and standards](docs/DEVELOPMENT_TOOLS.md) — actual captures, conventions and pending demonstrations.
+
+## API and design review
+
+- [TMDB integration manual](docs/API_DOCUMENTATION.md) — implemented requests, parsing, mood rules, posters and error handling.
+- [Technical design](docs/TECHNICAL_DESIGN.md) — architecture, data flow, schema and decisions.
+- [Repository pattern](docs/DESIGN_PATTERNS.md) — source walkthrough, diagram, alternatives and behavior evidence.
+- [API/design verification](docs/API_DESIGN_VERIFICATION.md) — 30 executed instrumentation checks, live search and release-assembly results, with limitations.

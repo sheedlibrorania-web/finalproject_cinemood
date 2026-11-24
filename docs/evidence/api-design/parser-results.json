@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-25",
+  "suite": "TmdbClientTest",
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "cases": [
+    "com.example.cinemood.TmdbClientTest.upbeatAndChillUseDifferentDiscoveryRequests",
+    "com.example.cinemood.TmdbClientTest.parsesMovieAndMissingOptionalFields",
+    "com.example.cinemood.TmdbClientTest.moodDiscoveryUsesGenreRules",
+    "com.example.cinemood.TmdbClientTest.searchEncodesQueryAndPassesTokenOnlyToTransport",
+    "com.example.cinemood.TmdbClientTest.movieNavigationPayloadRoundTrips",
+    "com.example.cinemood.TmdbClientTest.filtersInvalidAdultAndDuplicateResults",
+    "com.example.cinemood.TmdbClientTest.missingTokenAndEmptySearchAreRejected"
+  ]
+}
