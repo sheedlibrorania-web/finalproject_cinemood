@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screenRoot" style="@style/CM.Scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/cm_backdrop" android:clipToPadding="false" android:fillViewport="true">
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screenRoot" style="@style/CM.Scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/cm_backdrop" android:clipToPadding="true" android:fillViewport="true">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
         <TextView style="@style/CM.Brand" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_cinemood" android:textSize="20sp" android:letterSpacing="-0.02" android:textColor="@color/cm_text" android:layout_marginBottom="20dp" />
         <TextView style="@style/CM.Title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mood_title" />

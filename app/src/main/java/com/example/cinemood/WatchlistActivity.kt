@@ -80,7 +80,7 @@ class WatchlistActivity : BaseActivity() {
         findViewById<TextView>(R.id.tvEmpty).text = when {
             records.isEmpty() -> "Your collection starts with one film. Find a movie in Search or Mood, then save it here."
             visible.isEmpty() -> "No saved movies match this search or filter."
-            else -> "${visible.size} saved films · Tap a film to revisit your notes."
+            else -> resources.getQuantityString(R.plurals.saved_film_count, visible.size, visible.size)
         }
         renderMovies(findViewById(R.id.movieContainer), visible.map { it.asMovie() }, true,
             visible.filter { it.status == "WATCHED" }.map { it.tmdbMovieId.toInt() }.toSet())
