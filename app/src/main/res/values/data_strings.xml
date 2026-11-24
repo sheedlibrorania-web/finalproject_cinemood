@@ -1,0 +1,14 @@
+<resources>
+    <string name="data_title">Movie data settings</string>
+    <string name="data_sample_mode">Sample mode · works without a token</string>
+    <string name="data_live_mode">Live TMDB mode · internet required</string>
+    <string name="data_help">You can test accounts and saved movies in sample mode. For live search and mood recommendations, obtain your own API Read Access Token from https://www.themoviedb.org/settings/api and paste it below. The token is saved privately on this device and is never added to the project source. Saved movies remain available offline.</string>
+    <string name="data_token_hint">TMDB API Read Access Token</string>
+    <string name="data_save_token">Save token and enable live movies</string>
+    <string name="data_use_sample">Use sample movies instead</string>
+    <string name="data_invalid_token">Paste the complete Read Access Token without spaces</string>
+    <string name="data_token_saved">Token saved. Search will verify it with TMDB.</string>
+    <string name="data_credits_title">About and credits</string>
+    <string name="data_credits">This product uses the TMDB API but is not endorsed or certified by TMDB.\nhttps://www.themoviedb.org\nSample mode uses six locally supplied movie descriptions. Mood suggestions use genre rules and are not mental health advice.</string>
+    <string name="data_back">Back to my space</string>
+</resources>

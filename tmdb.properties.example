@@ -1,0 +1,2 @@
+# Copy to tmdb.properties (ignored by Git) and fill in locally.
+TMDB_READ_ACCESS_TOKEN=
