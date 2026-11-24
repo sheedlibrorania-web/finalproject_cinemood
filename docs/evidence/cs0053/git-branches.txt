@@ -1,0 +1,9 @@
+  baseline/cs0053-start
+* docs/cs0053-requirements
+  docs/cs0053-setup
+  master
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/baseline/cs0053-start
+  remotes/origin/docs/cs0053-setup
+  remotes/origin/main
+  remotes/origin/master

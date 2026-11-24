@@ -1,0 +1,8 @@
+7741433 | 2026-11-25T03:05:13+08:00 | Josh | Merge pull request #2 from sheedlibrorania-web/docs/cs0053-setup
+3216c6a | 2026-11-25T03:00:28+08:00 | Josh | Document CineMood setup and CS0053 development baseline
+2cbf64a | 2026-11-25T02:51:38+08:00 | Josh | Merge pull request #1 from sheedlibrorania-web/baseline/cs0053-start
+1807e53 | 2026-11-25T02:37:57+08:00 | Josh | Fix Android theme compatibility and UI resource warnings
+e958f8d | 2026-11-25T02:20:54+08:00 | Josh | Preserve existing CineMood application as CS0053 starting baseline
+090c4af | 2026-11-25T02:12:59+08:00 | Josh | Exclude private signing files, build outputs, and local IDE settings
+1a9ecaf | 2026-11-22T06:54:31+08:00 | sheedlibrorania-web | README
+5fe93ef | 2026-11-22T04:52:45+08:00 | Mark | v1-CineMood

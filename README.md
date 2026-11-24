@@ -84,7 +84,7 @@ CineMood began as the three-person CS0011 project and is reused for CS0053 with 
 
 The CS0053 team is Stephen and Mark. Existing application work is the starting baseline; later CS0053 work and reviews should be recorded honestly in GitHub. Reuse approval does not establish completion of every course evidence requirement.
 
-Use focused branches, meaningful commits under each contributor’s own identity, and reviewed pull requests into `master`. Do not commit credentials, signing keys, local IDE configuration or generated builds. Android Studio tool substitutions for the five VS Code extensions require specific instructor approval; IDE/reuse approval alone does not demonstrate that requirement.
+Use focused branches, meaningful commits under each contributor’s own identity, and reviewed pull requests into `master`. Do not commit credentials, signing keys, local IDE configuration or generated builds. Stephen reports specific instructor approval for Android Studio tool substitutions; the capabilities, actual demonstrations and approval-record limitations are documented in [the tools report](docs/DEVELOPMENT_TOOLS.md).
 
 ## Limitations and credits
 
@@ -93,3 +93,9 @@ Use focused branches, meaningful commits under each contributor’s own identity
 - A build-time TMDB token is extractable from an APK. This is the team’s classroom distribution approach; a backend is a future option for public distribution.
 - This product uses the TMDB API but is not endorsed or certified by TMDB. Live movie information and images come from [TMDB](https://www.themoviedb.org/); attribution is also shown in the app.
 - Codex assisted with implementation, tests and documentation. Team members must review, verify and be able to explain submitted work. Original integration history is recorded in [DATABASE_INTEGRATION.md](DATABASE_INTEGRATION.md).
+
+## CS0053 review documents
+
+- [Software Requirements Specification](docs/SRS.md) — current scope and acceptance criteria; approval pending.
+- [Course compliance register](docs/CS0053_COMPLIANCE.md) — evidence links, responsibilities and remaining gaps.
+- [Development tools and standards](docs/DEVELOPMENT_TOOLS.md) — actual captures, conventions and pending demonstrations.
