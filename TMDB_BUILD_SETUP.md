@@ -1,16 +1,31 @@
 # CineMood movie access for school builds
 
-Users of the release APK do not need a TMDB account or token. The team configures the token before building.
+Release APK users do not enter a TMDB token. The team supplies authorized movie access configuration before building.
 
-1. Copy tmdb.properties.example to tmdb.properties in the project root.
-2. In tmdb.properties, fill in TMDB_READ_ACCESS_TOKEN with the team's Read Access Token. Do not put quotes around it. Alternatively, set the TMDB_READ_ACCESS_TOKEN environment variable for the build process; it takes precedence.
-3. Sync and rebuild the project. Build a signed release APK using Android Studio when ready to submit. Release packaging refuses an empty token; a nonempty token must still be verified against TMDB.
-4. Test the resulting release APK on a clean emulator or device: search must work without entering credentials in the app. Retest mood discovery, saved movies, offline errors and recovery.
+## Configure locally
 
-tmdb.properties is ignored by Git. Never include it in a shared project ZIP, screenshots, logs or documentation. Each teammate building from source must configure their own authorized token locally. The professor can use the prebuilt APK; provide source-build setup instructions separately.
+1. Copy `tmdb.properties.example` to `tmdb.properties` in the project root.
+2. Fill in `TMDB_READ_ACCESS_TOKEN` with the authorized API Read Access Token, without quotes or a `Bearer ` prefix. The shorter API key is not interchangeable.
+3. Alternatively, configure `TMDB_READ_ACCESS_TOKEN` in the build process environment. The environment value takes precedence, even when empty; remove an unintended override.
+4. Sync and rebuild. Release packaging rejects a blank token. Verify the resulting APK against TMDB: accepting a nonblank value at build time does not validate it.
+5. Test live search without entering credentials in the release app, then retest mood discovery, posters, saved movies, offline errors and recovery.
 
-Release builds always use the built-in movie access configuration and show About CineMood with credits. Debug builds retain Developer movie settings, an optional local override and sample mode. An existing debug override can take precedence over a newly configured build token; debug settings remain for testing.
+`tmdb.properties` is ignored by Git. Never include it in project ZIPs, screenshots, logs or documentation. Each teammate building from source supplies authorized configuration locally. An evaluator can use the separately provided signed APK or follow [source setup instructions](docs/SETUP.md).
 
-This is a classroom distribution compromise. The token is compiled into the APK and can be extracted. Keeping the properties file out of Git does not make the APK credential secret. A backend remains the appropriate future step for public distribution. If the token is rotated, rebuild and redistribute the APK.
+## Debug and release behavior
 
-Do not silently replace failed live requests with sample movies. Preserve explicit error and retry feedback. SQLite accounts and personal records remain local and independent of TMDB access.
+| Build | Movie access |
+| --- | --- |
+| Fresh debug install | Uses the build token if configured; otherwise uses the labeled six-movie sample catalog. |
+| Debug with saved settings | A saved per-device token overrides the build token. Selecting sample mode stores an empty override, which continues to override later rebuilds. |
+| Release | Always uses the build token; shows About CineMood instead of token controls. |
+
+For debug, save an authorized token through Developer movie settings or use a fresh emulator to remove an obsolete override. Clearing app storage also removes it but deletes local accounts, watchlists and reviews; use that only on disposable test data.
+
+Build-time tokens are compiled into the APK. Rebuild and redistribute when the token changes or is rotated; changing the local file does not change an installed APK. SQLite accounts and personal records are independent of TMDB access. Failed live requests show errors and do not silently substitute sample movies.
+
+## Distribution limits and attribution
+
+This is the team’s classroom distribution compromise: compiled credentials can be extracted. Ignoring a properties file protects the source repository, not the credential inside the APK. A backend is a future option for public distribution.
+
+This product uses the TMDB API but is not endorsed or certified by TMDB. Live data and images come from [TMDB](https://www.themoviedb.org/). Obtain access through [TMDB API settings](https://www.themoviedb.org/settings/api) and follow the provider’s terms and attribution requirements.
