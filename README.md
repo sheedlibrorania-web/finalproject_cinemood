@@ -1,59 +1,95 @@
 # CineMood
 
-CineMood is a Kotlin Android app for mood-based movie discovery and a personal viewing journal. It uses a local SQLite database for accounts, watchlist entries, watched status, ratings and notes.
+CineMood is a native Android app for discovering movies by title or mood and keeping a personal watchlist and viewing journal. It uses Kotlin Activities, XML layouts, local SQLite storage and the TMDB API.
 
 ## Features
 
-- Registration, login, saved sessions and logout.
-- Salted PBKDF2 password hashes; case-insensitive unique usernames.
-- Movie title search, details, poster display and mood recommendations.
-- Live TMDB mode with a locally supplied API Read Access Token.
-- Explicitly labeled sample mode with six movies, available without a token or internet.
-- Account-specific saved movies, watched status, ratings from 1 to 5 and notes.
-- Edit reviews, delete reviews separately, or remove a saved movie with its review after confirmation.
-- Search, status filtering and sorting in the watchlist.
-- Persistent saved movie details so the watchlist and viewing journal remain available offline.
-- Loading, validation, empty-result and connection-error feedback.
+- Local registration, login, saved sessions and logout.
+- Salted PBKDF2 password hashes and case-insensitive unique usernames.
+- Live movie search, mood-to-genre recommendations, details and posters.
+- Account-specific watchlists with watched status, 1–5 ratings and notes.
+- Edit or delete a review separately; remove a saved movie after confirmation.
+- Watchlist search, status filters and sorting.
+- Saved movie metadata and reviews available offline.
+- Input validation, loading, empty-state and network-error messages.
 
-## Run the project
+Accounts and records stay on the device; there is no cloud account sync. CineMood helps users discover and track movies; it does not stream them.
 
-1. Extract the project into a new folder and open the CineMood folder in Android Studio.
-2. Allow Gradle sync. Use the Android SDK installed on your own computer; local.properties is deliberately excluded from the source ZIP.
-3. Run on an emulator or phone with Android API 24 or later.
-4. Register an account with a nonblank username and a password of at least 8 characters with no spaces or other whitespace, then sign in.
-5. Use Search or Mood to try the sample catalog immediately. Add a movie, mark it watched and save a rating and notes.
-6. In the dashboard, open Movie data settings to configure live TMDB mode if desired.
+## Quick start
 
-## Live TMDB setup
+1. Clone the repository and open its root folder in Android Studio:
 
-**Updated school release setup:** See TMDB_BUILD_SETUP.md. Release APKs use developer-supplied build configuration and expose About CineMood instead of token controls. The per-device instructions below apply only to debug development builds. Credentials compiled into an APK are extractable; this approach is for the classroom demonstration.
+   ```bash
+   git clone https://github.com/sheedlibrorania-web/finalproject_cinemood.git
+   cd finalproject_cinemood
+   git switch master
+   ```
 
-The app runs without a TMDB credential in sample mode. Real movie search requires your own API Read Access Token from https://www.themoviedb.org/settings/api. Obtain the token through your own TMDB account, following its registration process and terms. Paste it into Movie data settings and choose Save token and enable live movies. This expects the Read Access Token, not the shorter API key.
+2. Allow Gradle sync and install the requested SDK components. Use Android Studio’s bundled JDK for Gradle; the project compiles against Android SDK 37 and runs on API 24 or later.
+3. For live movie access, copy `tmdb.properties.example` to `tmdb.properties` in the project root. Fill in `TMDB_READ_ACCESS_TOKEN` locally with an authorized TMDB API Read Access Token, then rebuild. Do not commit that file.
+4. Choose the `app` run configuration and an emulator or connected phone, then click **Run**.
+5. Register a local account, sign in and search for a movie. Passwords require at least eight characters and must contain no whitespace.
 
-The credential is stored only in the app's private preferences and is not part of the source or APK build configuration. It is not displayed again after saving. The app uses it only in the Authorization header for https://api.themoviedb.org. Switching back to sample mode removes the saved token. Live search checks whether the token is accepted; saving it locally is not a claim that it is valid. Do not publish tokens in GitHub, screenshots or documentation.
+A debug build without a token uses the explicitly labeled six-movie sample catalog. Release builds require a token at packaging time and use live access automatically; end users see About CineMood instead of credential controls. Network failures do not silently switch to sample data.
 
-Movie suggestions use a transparent mood-to-genre mapping; they are not machine learning or mental health advice. Search and discovery currently show the first page of TMDB results. An API or network failure shows an error and does not silently substitute sample results.
+See [Setup and troubleshooting](docs/SETUP.md) for detailed instructions and [TMDB build configuration](TMDB_BUILD_SETUP.md) for token precedence and release behavior.
 
-This product uses the TMDB API but is not endorsed or certified by TMDB. Movie information and images in live mode come from https://www.themoviedb.org. Credits are also available inside Movie data settings.
+## Project structure
+
+```text
+app/src/main/java/com/example/cinemood/
+  *Activity.kt       Screens and interaction handlers
+  data/             SQLite helper, repository, password policy and sessions
+  network/          TMDB requests and poster loading
+app/src/main/res/   XML layouts, themes, text and drawable resources
+app/src/test/       Local unit tests
+app/src/androidTest/ Device/emulator tests
+/docs/              Setup guide and recorded quality evidence
+```
+
+The app uses Activities/XML rather than Jetpack Compose. `CineMoodRepository` centralizes local data access and validation; `CineMoodDbHelper` manages the SQLite schema and upgrades.
 
 ## Database
 
 | Table | Purpose |
 | --- | --- |
-| users | Local account name, password hash and creation time. |
-| watchlist | Owner, movie ID, title, overview, poster path, year, genre, source and viewing status. |
-| reviews | One personal rating and optional notes per watchlist entry. |
+| users | Local username, password hash and creation time. |
+| watchlist | Owner, movie ID, saved metadata, source and viewing status. |
+| reviews | One rating and optional notes per watchlist entry. |
 
-One user has many watchlist records; a watchlist record has zero or one review. Unique constraints prevent duplicate usernames and duplicate movie saves for the same account. Foreign keys remove the related review when a movie is deleted. Logging out clears the session and preserves the database.
+One user owns many watchlist entries, each with zero or one review. Constraints prevent duplicate usernames and duplicate movie saves within an account. Deleting a movie also removes its review; logging out preserves records. Schema version 2 adds saved movie metadata and migrates original sample IDs to negative values to avoid collisions with TMDB IDs.
 
-Schema version 2 upgrades version 1 with saved movie metadata. Known original sample IDs are migrated to negative IDs so they cannot collide with real TMDB IDs. Account IDs, watchlist IDs and review links are retained.
+## Build and test
 
-## Collaboration
+From the project root with the Gradle JDK configured:
 
-Use this complete Android Studio project as the shared project. Make focused changes on feature branches, commit under each member's own account, and have another member review each pull request. Test the combined build before merging. Do not commit local.properties, credentials, emulator databases or generated build folders.
+```bash
+./gradlew :app:assembleDebug
+./gradlew :app:testDebugUnitTest :app:lintDebug
+# Requires a running emulator or connected test device:
+./gradlew :app:connectedDebugAndroidTest
+```
 
-## Verification and AI use
+On Windows, use `gradlew.bat` instead of `./gradlew`. Instrumentation tests can change app data; use a dedicated test emulator. Live checks require an authorized token and internet access. See [SETUP.md](docs/SETUP.md) for test prerequisites and output locations.
 
-See DATABASE_TEST_RESULTS.md for executed checks and limits, and DATABASE_INTEGRATION.md for the original integration history. New instrumentation tests cover TMDB JSON parsing and request construction, database migration and the real register/login/movie/review/logout screen flow. A live call with the team's own token must be verified separately when that credential is available.
+The November 25, 2026 baseline review recorded 10 passing unit tests, 29 passing instrumentation tests, and zero lint errors with eight remaining warnings. These are historical executed results, not a guarantee for subsequent changes. The restart-checkpoint test is phase-gated; this review did not execute a separate two-process restart experiment. Details: [quality review](docs/quality/pre-push-review.md), [per-test results](docs/quality/instrumentation-results.csv), [earlier database checks](DATABASE_TEST_RESULTS.md).
 
-Codex assisted with the database integration, validation, TMDB client, tests and documentation. Students remain responsible for reviewing the code, verifying the final submission and explaining how it works.
+## Team and course context
+
+CineMood began as the three-person CS0011 project and is reused for CS0053 with instructor approval. Original contributions remain credited:
+
+- **Mark Jayson D. Cadano:** movie discovery, TMDB integration, search, details and mood recommendations.
+- **Rasheed L. Librorania:** accounts, SQLite schema and persistence.
+- **Stephen Josh Canete:** watchlist, viewing journal and feature integration.
+
+The CS0053 team is Stephen and Mark. Existing application work is the starting baseline; later CS0053 work and reviews should be recorded honestly in GitHub. Reuse approval does not establish completion of every course evidence requirement.
+
+Use focused branches, meaningful commits under each contributor’s own identity, and reviewed pull requests into `master`. Do not commit credentials, signing keys, local IDE configuration or generated builds. Android Studio tool substitutions for the five VS Code extensions require specific instructor approval; IDE/reuse approval alone does not demonstrate that requirement.
+
+## Limitations and credits
+
+- Mood recommendations use explicit genre rules, not machine learning. Discovery and search currently show the first page of results.
+- Local accounts do not synchronize across devices. Uninstalling or clearing app storage removes local accounts and records.
+- A build-time TMDB token is extractable from an APK. This is the team’s classroom distribution approach; a backend is a future option for public distribution.
+- This product uses the TMDB API but is not endorsed or certified by TMDB. Live movie information and images come from [TMDB](https://www.themoviedb.org/); attribution is also shown in the app.
+- Codex assisted with implementation, tests and documentation. Team members must review, verify and be able to explain submitted work. Original integration history is recorded in [DATABASE_INTEGRATION.md](DATABASE_INTEGRATION.md).
