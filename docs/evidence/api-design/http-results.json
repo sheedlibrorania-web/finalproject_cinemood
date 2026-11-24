@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-25",
+  "application_baseline": "7ff352d",
+  "suite": "TmdbHttpTest",
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "cases": [
+    "com.example.cinemood.TmdbHttpTest.ioFailureShowsConnectionMessage",
+    "com.example.cinemood.TmdbHttpTest.malformedJsonDoesNotProduceInventedMovies",
+    "com.example.cinemood.TmdbHttpTest.timeoutWhileObtainingResponseShowsTimeoutMessage",
+    "com.example.cinemood.TmdbHttpTest.unexpectedHttpStatusShowsUnavailableMessage",
+    "com.example.cinemood.TmdbHttpTest.serverFailureShowsUnavailableMessage",
+    "com.example.cinemood.TmdbHttpTest.rateLimitShowsRetryMessage",
+    "com.example.cinemood.TmdbHttpTest.timeoutWhileReadingResponseShowsTimeoutMessage",
+    "com.example.cinemood.TmdbHttpTest.successUsesBearerHeaderTimeoutsAndClosesResources",
+    "com.example.cinemood.TmdbHttpTest.authorizationFailuresUseTheConfiguredBuildMessage",
+    "com.example.cinemood.TmdbHttpTest.emptySuccessIsAnEmptyListRatherThanAnError"
+  ],
+  "method": "Fake HttpURLConnection exercises actual HTTP branches; no live requests or real tokens."
+}
