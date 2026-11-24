@@ -1,0 +1,6 @@
+Analyzing file: /Users/stephenjosh/Documents/Programming/School/MobProg/CineMood/app/src/main/java/com/example/cinemood/data/PasswordPolicy.kt
+INFO in /Users/stephenjosh/Documents/Programming/School/MobProg/CineMood/app/src/main/java/com/example/cinemood/data/PasswordPolicy.kt
+line: 6, column: 0
+message: Expression should use clarifying parentheses
+
+----------------------------------------

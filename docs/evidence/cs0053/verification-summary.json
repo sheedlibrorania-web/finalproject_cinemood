@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-25",
+  "timezone": "Asia/Manila",
+  "application_baseline": "7741433",
+  "command": "./gradlew :app:testDebugUnitTest :app:lintDebug --rerun-tasks --console=plain",
+  "result": "BUILD SUCCESSFUL",
+  "unit_suites": [
+    {
+      "name": "com.example.cinemood.MoodSearchTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-24T19:09:14.437Z"
+    },
+    {
+      "name": "com.example.cinemood.PasswordPolicyTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-24T19:09:14.467Z"
+    }
+  ],
+  "lint": {
+    "errors": 0,
+    "warnings": 8,
+    "warning_ids": [
+      "AndroidGradlePluginVersion",
+      "GradleDependency",
+      "UnusedResources",
+      "UseCompoundDrawables",
+      "UseKtx"
+    ]
+  },
+  "limitations": [
+    "No fresh device-suite execution for this documentation edit.",
+    "No independent clean-machine setup performed.",
+    "Tool equivalence approval subsequently reported by Stephen; original approval record not attached; peer review remains pending."
+  ],
+  "subsequent_tool_demonstration": {
+    "date": "2026-11-25",
+    "formatter": "completed on disposable copy; no source changes",
+    "debugger": "method breakpoint, call stack and disposable variable observed; resumed validation rejected short input",
+    "index": "SCREENSHOTS.md"
+  }
+}
