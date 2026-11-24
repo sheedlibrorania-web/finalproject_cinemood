@@ -11,4 +11,5 @@
     <string name="data_credits_title">About and credits</string>
     <string name="data_credits">This product uses the TMDB API but is not endorsed or certified by TMDB.\nhttps://www.themoviedb.org\nSample mode uses six locally supplied movie descriptions. Mood suggestions use genre rules and are not mental health advice.</string>
     <string name="data_back">Back to my space</string>
+    <string name="tmdb_logo_description">The Movie Database (TMDB) logo</string>
 </resources>

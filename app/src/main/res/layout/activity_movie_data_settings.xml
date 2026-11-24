@@ -11,6 +11,10 @@
         </LinearLayout>
         <LinearLayout style="@style/CM.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
             <TextView style="@style/CM.Section" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_credits_title" />
+            <ImageView android:id="@+id/ivTmdbLogo" android:layout_width="160dp" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:adjustViewBounds="true"
+                android:scaleType="fitStart" android:src="@drawable/tmdb_logo"
+                android:contentDescription="@string/tmdb_logo_description" />
             <TextView style="@style/CM.Body" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_credits" android:autoLink="web" />
         </LinearLayout>
         <Button android:id="@+id/btnBack" style="@style/CM.Quiet" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_back" android:gravity="start|center_vertical" android:paddingStart="0dp" android:paddingEnd="16dp" android:minHeight="48dp" android:layout_marginBottom="8dp" />
