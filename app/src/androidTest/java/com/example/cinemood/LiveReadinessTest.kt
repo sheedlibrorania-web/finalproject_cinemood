@@ -13,7 +13,9 @@ import org.junit.Test
 class LiveReadinessTest {
     private val context = InstrumentationRegistry.getInstrumentation().targetContext
     @Test fun processRestartCheckpoint() {
-        val stage = InstrumentationRegistry.getArguments().getString("checkpoint") ?: return
+        val stage = InstrumentationRegistry.getArguments().getString("checkpoint")
+        assumeTrue("Run separate checkpoint=save and checkpoint=verify invocations for process restart evidence", stage != null)
+        require(stage in setOf("save", "verify")) { "checkpoint must be save or verify" }
         val name = "cinemood_process_restart_test.db"
         val prefs = context.getSharedPreferences("qa_restart", 0)
         val token = TmdbSettings(context).token
