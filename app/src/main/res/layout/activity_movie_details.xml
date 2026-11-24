@@ -1,26 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" style="@style/CM.Scroll" android:id="@+id/screenRoot" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/cm_backdrop" android:fillViewport="true" android:clipToPadding="false">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="top">
-        <TextView style="@style/CM.Brand" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CineMood" android:textSize="20sp" android:letterSpacing="-0.02" android:textColor="@color/cm_text" android:layout_marginBottom="20dp" />
+        <TextView style="@style/CM.Brand" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_cinemood" android:textSize="20sp" android:letterSpacing="-0.02" android:textColor="@color/cm_text" android:layout_marginBottom="20dp" />
         <LinearLayout style="@style/CM.Card" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/cm_hero">
             <ImageView android:id="@+id/ivPoster" android:layout_width="160dp" android:layout_height="240dp" android:layout_gravity="center_horizontal" android:src="@drawable/cm_reel" android:importantForAccessibility="no" android:layout_marginBottom="12dp" android:scaleType="fitCenter" />
-            <TextView style="@style/CM.Label" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A STORY WORTH YOUR TIME" />
+            <TextView style="@style/CM.Label" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_a_story_worth_your_time" />
         </LinearLayout>
-        <TextView style="@style/CM.Title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Movie title" android:id="@+id/tvMovieTitle" />
+        <TextView style="@style/CM.Title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_movie_title" android:id="@+id/tvMovieTitle" />
         <TextView style="@style/CM.Label" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:id="@+id/tvMovieMeta" android:textColor="@color/cm_muted" android:letterSpacing="0" android:textSize="13sp" />
-        <TextView style="@style/CM.Section" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="The story" />
+        <TextView style="@style/CM.Section" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_the_story" />
         <TextView style="@style/CM.Body" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:id="@+id/tvOverview" />
-        <Button style="@style/CM.Button" android:id="@+id/btnAddWatchlist" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="＋  Add to watchlist" />
-        <Button style="@style/CM.Quiet" android:id="@+id/btnRemoveWatchlist" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Remove from watchlist" />
+        <Button style="@style/CM.Button" android:id="@+id/btnAddWatchlist" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_add_to_watchlist" />
+        <Button style="@style/CM.Quiet" android:id="@+id/btnRemoveWatchlist" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_remove_from_watchlist" />
         <LinearLayout style="@style/CM.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView style="@style/CM.Section" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Your viewing journal" />
-            <CheckBox android:id="@+id/cbWatched" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="I have watched this film" android:textColor="@color/cm_text" android:buttonTint="@color/cm_accent" />
-            <TextView style="@style/CM.Label" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="YOUR RATING" />
-            <RatingBar android:id="@+id/ratingBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleX="0.9" android:scaleY="0.9" android:transformPivotX="0dp" android:numStars="5" android:stepSize="1" android:progressTint="@color/cm_accent" android:secondaryProgressTint="@color/cm_accent" android:progressBackgroundTint="@color/cm_border" android:contentDescription="Personal movie rating" />
-            <EditText style="@style/CM.Input" android:id="@+id/etNotes" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="What stayed with you?" android:inputType="textMultiLine" android:minLines="3" android:gravity="top" />
-            <Button style="@style/CM.Button" android:id="@+id/btnSaveReview" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save my thoughts  →" />
+            <TextView style="@style/CM.Section" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_your_viewing_journal" />
+            <CheckBox android:id="@+id/cbWatched" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="@string/ui_i_have_watched_this_film" android:textColor="@color/cm_text" android:buttonTint="@color/cm_accent" />
+            <TextView style="@style/CM.Label" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_your_rating" />
+            <RatingBar android:id="@+id/ratingBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleX="0.9" android:scaleY="0.9" android:transformPivotX="0dp" android:numStars="5" android:stepSize="1" android:progressTint="@color/cm_accent" android:secondaryProgressTint="@color/cm_accent" android:progressBackgroundTint="@color/cm_border" android:contentDescription="@string/ui_personal_movie_rating" />
+            <EditText android:importantForAutofill="no" style="@style/CM.Input" android:id="@+id/etNotes" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/ui_what_stayed_with_you" android:inputType="textMultiLine" android:minLines="3" android:gravity="top" />
+            <Button style="@style/CM.Button" android:id="@+id/btnSaveReview" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_save_my_thoughts" />
         </LinearLayout>
-        <Button style="@style/CM.Secondary" android:id="@+id/btnShare" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Share this film" />
-        <Button style="@style/CM.Quiet" android:id="@+id/btnBack" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="←  Back to the collection" android:gravity="start|center_vertical" android:paddingStart="0dp" android:minHeight="48dp" android:layout_marginBottom="8dp" />
+        <Button style="@style/CM.Secondary" android:id="@+id/btnShare" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_share_this_film" />
+        <Button style="@style/CM.Quiet" android:id="@+id/btnBack" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_back_to_the_collection" android:gravity="start|center_vertical" android:paddingStart="0dp" android:paddingEnd="16dp" android:minHeight="48dp" android:layout_marginBottom="8dp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

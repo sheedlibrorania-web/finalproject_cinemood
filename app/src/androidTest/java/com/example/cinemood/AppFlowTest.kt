@@ -2,7 +2,6 @@ package com.example.cinemood
 
 import android.content.Intent
 import android.widget.RatingBar
-import android.view.View
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*

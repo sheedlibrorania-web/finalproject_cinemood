@@ -14,7 +14,7 @@ class MovieDataSettingsActivity : BaseActivity() {
         if (!BuildConfig.DEBUG) {
             val status = findViewById<TextView>(R.id.tvDataMode)
             (status.parent as android.view.View).visibility = android.view.View.GONE
-            findViewById<TextView>(R.id.tvDataTitle).text = "About CineMood"
+            findViewById<TextView>(R.id.tvDataTitle).text = getString(R.string.about_cinemood)
             return
         }
         val settings = TmdbSettings(this)

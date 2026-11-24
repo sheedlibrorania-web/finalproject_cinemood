@@ -100,10 +100,10 @@ abstract class BaseActivity : AppCompatActivity() {
         movies.forEach { movie ->
             val row = layoutInflater.inflate(R.layout.item_movie, container, false)
             com.example.cinemood.network.PosterLoader.load(row.findViewById(R.id.ivMovieArt), movie.posterPath)
-            val status = if (movie.id in watchedIds) "Watched" else "To watch"
+            val status = getString(if (movie.id in watchedIds) R.string.status_watched else R.string.status_to_watch)
             row.findViewById<TextView>(R.id.tvRowTitle).text = movie.title
-            row.findViewById<TextView>(R.id.tvRowMeta).text = "${movie.year} · ${movie.genre}"
-            row.findViewById<TextView>(R.id.tvRowStatus).text = if (showStatus) "$status  ·  VIEW FILM →" else "VIEW FILM →"
+            row.findViewById<TextView>(R.id.tvRowMeta).text = getString(R.string.movie_metadata, movie.year, movie.genre)
+            row.findViewById<TextView>(R.id.tvRowStatus).text = if (showStatus) getString(R.string.movie_status_action, status) else getString(R.string.view_film_action)
             row.contentDescription = "${movie.title}, ${movie.year}, ${movie.genre}" + if (showStatus) ", $status" else ""
             row.setOnClickListener { openMovie(movie) }
             container.addView(row)

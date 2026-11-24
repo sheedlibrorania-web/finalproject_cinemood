@@ -27,7 +27,7 @@ class MovieDetailsActivity : BaseActivity() {
         if (movie == null) { message("Movie not found"); finish(); return }
         val userId = session.userId
         findViewById<TextView>(R.id.tvMovieTitle).text = movie.title
-        findViewById<TextView>(R.id.tvMovieMeta).text = "${movie.year} · ${movie.genre}"
+        findViewById<TextView>(R.id.tvMovieMeta).text = getString(R.string.movie_metadata, movie.year, movie.genre)
         findViewById<TextView>(R.id.tvOverview).text = movie.overview
         com.example.cinemood.network.PosterLoader.load(findViewById(R.id.ivPoster), movie.posterPath)
         val add = findViewById<Button>(R.id.btnAddWatchlist)
@@ -124,7 +124,7 @@ class MovieDetailsActivity : BaseActivity() {
             catch (_: ActivityNotFoundException) { message("No sharing app is installed") }
         }
         val deleteReview = Button(android.view.ContextThemeWrapper(this, R.style.CM_Quiet)).apply {
-            text = "Delete rating and notes"
+            text = getString(R.string.delete_rating_notes)
             setOnClickListener {
                 val entry = saved ?: return@setOnClickListener
                 AlertDialog.Builder(this@MovieDetailsActivity).setTitle("Delete rating and notes?")

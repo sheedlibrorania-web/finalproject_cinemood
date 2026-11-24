@@ -96,15 +96,16 @@ class MoodActivity : BaseActivity() {
             return
         }
         val service = com.example.cinemood.network.MovieService(this)
-        resultLabel.text = "Loading recommendations…"
+        resultLabel.setText(R.string.loading_recommendations)
         movieWork({ service.discover(matches) }, { movies ->
             if (version == requestVersion) {
-                val mode = if (service.sampleMode) "Sample mode · " else "TMDB · "
-                resultLabel.text = mode + if (movies.isEmpty()) "No movies found for these moods." else
+                val mode = getString(if (service.sampleMode) R.string.movie_source_sample else R.string.movie_source_live)
+                val summary = if (movies.isEmpty()) getString(R.string.mood_no_movies) else
                     resources.getQuantityString(R.plurals.mood_recommendation_count, movies.size, movies.size)
+                resultLabel.text = getString(R.string.source_result, mode, summary)
                 renderMovies(container, movies)
             }
-        }, { error -> if (version == requestVersion) resultLabel.text = "$error Choose a mood to retry." })
+        }, { error -> if (version == requestVersion) resultLabel.text = getString(R.string.mood_retry, error) })
     }
 
     override fun onDestroy() {

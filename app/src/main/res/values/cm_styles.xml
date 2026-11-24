@@ -1,6 +1,7 @@
 <resources>
-<style name="Theme.CineMood" parent="Theme.AppCompat.Light.NoActionBar">
-<item name="android:fontFamily">sans-serif</item><item name="android:windowLightStatusBar">true</item><item name="android:windowLightNavigationBar">true</item><item name="android:windowBackground">@color/cm_background</item><item name="android:statusBarColor">@color/cm_background</item><item name="android:navigationBarColor">@color/cm_background</item><item name="colorAccent">@color/cm_accent</item><item name="android:colorControlActivated">@color/cm_accent</item></style>
+<style name="Theme.CineMood.Base" parent="Theme.AppCompat.Light.NoActionBar">
+<item name="android:fontFamily">sans-serif</item><item name="android:windowLightStatusBar">true</item><item name="android:windowBackground">@color/cm_background</item><item name="android:statusBarColor">@color/cm_background</item><item name="android:navigationBarColor">@color/cm_text</item><item name="colorAccent">@color/cm_accent</item><item name="android:colorControlActivated">@color/cm_accent</item></style>
+<style name="Theme.CineMood" parent="Theme.CineMood.Base" />
 <style name="CM"/>
 <style name="CM.InputIcon" parent="Widget.AppCompat.ImageButton">
     <item name="android:stateListAnimator">@animator/cm_button_motion</item>

@@ -1,6 +1,5 @@
 package com.example.cinemood
 
-import android.database.sqlite.SQLiteDatabase
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.cinemood.data.CineMoodDbHelper
 import org.junit.Assert.*

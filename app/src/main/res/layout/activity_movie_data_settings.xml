@@ -13,6 +13,6 @@
             <TextView style="@style/CM.Section" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_credits_title" />
             <TextView style="@style/CM.Body" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_credits" android:autoLink="web" />
         </LinearLayout>
-        <Button android:id="@+id/btnBack" style="@style/CM.Quiet" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_back" android:gravity="start|center_vertical" android:paddingStart="0dp" android:minHeight="48dp" android:layout_marginBottom="8dp" />
+        <Button android:id="@+id/btnBack" style="@style/CM.Quiet" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_back" android:gravity="start|center_vertical" android:paddingStart="0dp" android:paddingEnd="16dp" android:minHeight="48dp" android:layout_marginBottom="8dp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

@@ -10,7 +10,7 @@ class DashboardActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         showScreen(R.layout.activity_dashboard)
         val username = session.username.ifBlank { "Movie Buff" }
-        findViewById<TextView>(R.id.tvWelcome).text = "Welcome back, $username."
+        findViewById<TextView>(R.id.tvWelcome).text = getString(R.string.welcome_username, username)
         findViewById<Button>(R.id.btnSearch).setOnClickListener {
             openThroughJourney(SearchActivity::class.java)
         }
@@ -30,7 +30,7 @@ class DashboardActivity : BaseActivity() {
         val logout = findViewById<Button>(R.id.btnLogout)
         val container = logout.parent as android.view.ViewGroup
         val settings = Button(android.view.ContextThemeWrapper(this, R.style.CM_Secondary)).apply {
-            text = if (BuildConfig.DEBUG) "Developer movie settings" else "About CineMood"
+            setText(if (BuildConfig.DEBUG) R.string.developer_movie_settings else R.string.about_cinemood)
             setOnClickListener { startActivity(Intent(this@DashboardActivity, MovieDataSettingsActivity::class.java)) }
         }
         container.addView(settings, container.indexOfChild(logout))

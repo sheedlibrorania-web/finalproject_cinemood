@@ -22,15 +22,17 @@ class SearchActivity : BaseActivity() {
             val label = findViewById<TextView>(R.id.tvResultCount)
             val container = findViewById<LinearLayout>(R.id.movieContainer)
             val service = com.example.cinemood.network.MovieService(this)
-            label.text = "Loading movies…"
+            label.setText(R.string.loading_movies)
             container.removeAllViews()
             movieWork({ if (value.isBlank()) service.discover(emptyList()) else service.search(value) }, { results ->
                 if (version == requestVersion) {
-                    val mode = if (service.sampleMode) "Sample mode · " else "TMDB · "
-                    label.text = mode + if (results.isEmpty()) "No movies found. Try another title." else "${results.size} movies"
+                    val mode = getString(if (service.sampleMode) R.string.movie_source_sample else R.string.movie_source_live)
+                    val summary = if (results.isEmpty()) getString(R.string.search_no_movies) else
+                        resources.getQuantityString(R.plurals.search_movie_count, results.size, results.size)
+                    label.text = getString(R.string.source_result, mode, summary)
                     renderMovies(container, results)
                 }
-            }, { error -> if (version == requestVersion) label.text = "$error Tap Find a film to retry." })
+            }, { error -> if (version == requestVersion) label.text = getString(R.string.search_retry, error) })
         }
         findViewById<Button>(R.id.btnSearch).setOnClickListener { search(true) }
         query.setOnEditorActionListener { _, action, _ ->
