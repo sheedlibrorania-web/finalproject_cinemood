@@ -99,6 +99,7 @@ class JourneyActivity : BaseActivity() {
         hasContinued = true
         progressAnimation?.cancel()
         intent.getBundleExtra(EXTRA_JOURNEY_EXTRAS)?.let { destination.putExtras(it) }
+        destination.putExtra("user_id", session.userId)
         if (target == LoginActivity::class.java.name) {
             destination.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
         }

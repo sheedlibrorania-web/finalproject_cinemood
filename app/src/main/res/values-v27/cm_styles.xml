@@ -1,0 +1,7 @@
+<resources>
+    <!-- Dark navigation icons are supported starting at Android 8.1. -->
+    <style name="Theme.CineMood" parent="Theme.CineMood.Base">
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/cm_background</item>
+    </style>
+</resources>

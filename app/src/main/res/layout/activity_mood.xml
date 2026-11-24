@@ -1,217 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/screenRoot"
-    style="@style/CM.Scroll"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/cm_backdrop"
-    android:clipToPadding="false"
-    android:fillViewport="true">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
-
-        <TextView
-            style="@style/CM.Brand"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/mood_brand" />
-
-        <TextView
-            style="@style/CM.Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/mood_title" />
-
-        <TextView
-            style="@style/CM.Body"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/mood_intro" />
-
-        <LinearLayout
-            style="@style/CM.Card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="@style/CM.Label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:labelFor="@id/etMoodQuery"
-                android:text="@string/mood_search_label" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <FrameLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginBottom="16dp">
-
-                    <EditText
-                        android:id="@+id/etMoodQuery"
-                        style="@style/CM.Input"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="0dp"
-                        android:paddingEnd="64dp"
-                        android:hint="@string/mood_search_hint"
-                        android:imeOptions="actionSearch"
-                        android:inputType="textCapSentences"
-                        android:saveEnabled="false"
-                        android:singleLine="true" />
-
-                    <ImageButton
-                        android:id="@+id/btnSearchMood"
-                        style="@style/CM.InputIcon"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="end|top"
-                        android:layout_marginTop="4dp"
-                        android:layout_marginEnd="4dp"
-                        android:contentDescription="@string/mood_search_action"
-                        android:src="@drawable/ic_search" />
+<?xml version='1.0' encoding='utf-8'?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screenRoot" style="@style/CM.Scroll" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/cm_backdrop" android:clipToPadding="false" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <TextView style="@style/CM.Brand" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/ui_cinemood" android:textSize="20sp" android:letterSpacing="-0.02" android:textColor="@color/cm_text" android:layout_marginBottom="20dp" />
+        <TextView style="@style/CM.Title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mood_title" />
+        <TextView style="@style/CM.Body" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mood_intro" />
+        <LinearLayout style="@style/CM.Card" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView style="@style/CM.Label" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mood_search_label" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <FrameLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginBottom="16dp">
+                    <EditText android:importantForAutofill="no" android:id="@+id/etMoodQuery" style="@style/CM.Input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="0dp" android:paddingStart="16dp" android:paddingEnd="64dp" android:hint="@string/mood_search_hint" android:imeOptions="actionSearch" android:inputType="textCapSentences" android:saveEnabled="false" android:singleLine="true" />
+                    <ImageButton android:id="@+id/btnSearchMood" style="@style/CM.InputIcon" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="end|top" android:layout_marginTop="4dp" android:layout_marginEnd="4dp" android:contentDescription="@string/mood_search_action" android:src="@drawable/ic_search" />
                 </FrameLayout>
-
-                <Button
-                    android:id="@+id/btnClearMoodSearch"
-                    style="@style/CM.Quiet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/mood_search_clear"
-                    android:visibility="gone" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tvMoodOptionsLabel"
-            style="@style/CM.Label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:labelFor="@id/moodOptions"
-            android:text="@string/mood_optional_label" />
-
-        <LinearLayout
-            android:id="@+id/moodOptions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/btnHappy"
-                    style="@style/CM.Mood"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/mood_happy" />
-                <Button
-                    android:id="@+id/btnRomantic"
-                    style="@style/CM.Mood"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/mood_romantic" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/btnExcited"
-                    style="@style/CM.Mood"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/mood_excited" />
-                <Button
-                    android:id="@+id/btnScared"
-                    style="@style/CM.Mood"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/mood_scared" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/btnCurious"
-                    style="@style/CM.Mood"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/mood_curious" />
-                <Button
-                    android:id="@+id/btnRelaxed"
-                    style="@style/CM.Mood"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/mood_relaxed" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/btnSad"
-                    style="@style/CM.Mood"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/mood_sad" />
-                <Button
-                    android:id="@+id/btnAnyMood"
-                    style="@style/CM.Mood"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="@string/mood_any" />
+                <Button android:id="@+id/btnClearMoodSearch" style="@style/CM.Quiet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="@string/mood_search_clear" android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/tvMoodHeading"
-            style="@style/CM.Section"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:accessibilityLiveRegion="polite"
-            android:text="@string/mood_all_movies" />
-
-        <TextView
-            android:id="@+id/tvMoodResults"
-            style="@style/CM.Body"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:accessibilityLiveRegion="polite" />
-
-        <LinearLayout
-            android:id="@+id/movieContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-        <Button
-            android:id="@+id/btnBack"
-            style="@style/CM.Quiet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/mood_back" />
+        <TextView android:id="@+id/tvMoodOptionsLabel" style="@style/CM.Label" android:layout_width="match_parent" android:layout_height="wrap_content" android:labelFor="@id/moodOptions" android:text="@string/mood_optional_label" />
+        <LinearLayout android:id="@+id/moodOptions" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnHappy" style="@style/CM.Mood" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/mood_happy" />
+                <Button android:id="@+id/btnRomantic" style="@style/CM.Mood" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/mood_romantic" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnExcited" style="@style/CM.Mood" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/mood_excited" />
+                <Button android:id="@+id/btnScared" style="@style/CM.Mood" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/mood_scared" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnCurious" style="@style/CM.Mood" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/mood_curious" />
+                <Button android:id="@+id/btnRelaxed" style="@style/CM.Mood" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/mood_relaxed" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:id="@+id/btnSad" style="@style/CM.Mood" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/mood_sad" />
+                <Button android:id="@+id/btnAnyMood" style="@style/CM.Mood" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="@string/mood_any" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/tvMoodHeading" style="@style/CM.Section" android:layout_width="match_parent" android:layout_height="wrap_content" android:accessibilityLiveRegion="polite" android:text="@string/mood_all_movies" />
+        <TextView android:id="@+id/tvMoodResults" style="@style/CM.Body" android:layout_width="match_parent" android:layout_height="wrap_content" android:accessibilityLiveRegion="polite" />
+        <LinearLayout android:id="@+id/movieContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+        <Button android:id="@+id/btnBack" style="@style/CM.Quiet" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mood_back" android:gravity="start|center_vertical" android:paddingStart="0dp" android:paddingEnd="16dp" android:minHeight="48dp" android:layout_marginBottom="8dp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

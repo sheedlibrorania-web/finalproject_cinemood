@@ -14,6 +14,9 @@ import androidx.core.widget.doAfterTextChanged
 class MoodActivity : BaseActivity() {
     private var selectedMood: String? = null
     private lateinit var moodQuery: EditText
+    private var requestVersion = 0
+    private val debounceHandler = android.os.Handler(android.os.Looper.getMainLooper())
+    private val deferredSearch = Runnable { renderRecommendations() }
     private val moodButtons = mapOf(
         R.id.btnHappy to "Happy", R.id.btnRomantic to "Romantic", R.id.btnExcited to "Excited",
         R.id.btnScared to "Scared", R.id.btnCurious to "Curious", R.id.btnRelaxed to "Relaxed", R.id.btnSad to "Sad"
@@ -28,7 +31,9 @@ class MoodActivity : BaseActivity() {
         moodQuery.setText(savedInstanceState?.getString("moodQuery").orEmpty())
         moodQuery.doAfterTextChanged {
             selectedMood = null
-            renderRecommendations()
+            requestVersion++
+            debounceHandler.removeCallbacks(deferredSearch)
+            debounceHandler.postDelayed(deferredSearch, 400)
         }
         moodButtons.forEach { (id, mood) ->
             findViewById<Button>(id).setOnClickListener {
@@ -46,11 +51,13 @@ class MoodActivity : BaseActivity() {
 
     private fun selectMood(mood: String?) {
         moodQuery.text.clear()
+        debounceHandler.removeCallbacks(deferredSearch)
         selectedMood = mood
         renderRecommendations()
     }
 
     private fun submitSearch() {
+        debounceHandler.removeCallbacks(deferredSearch)
         renderRecommendations()
         getSystemService(InputMethodManager::class.java)
             .hideSoftInputFromWindow(moodQuery.windowToken, 0)
@@ -80,13 +87,30 @@ class MoodActivity : BaseActivity() {
             matches.isEmpty() -> getString(R.string.mood_no_matches_title)
             else -> getString(R.string.mood_edit_heading, labels)
         }
-        val movies = if (browsing) DemoStore.movies else DemoStore.forMoods(matches)
-        findViewById<TextView>(R.id.tvMoodResults).text = if (searching && matches.isEmpty()) {
-            getString(R.string.mood_no_matches_hint)
-        } else {
-            resources.getQuantityString(R.plurals.mood_recommendation_count, movies.size, movies.size)
+        val version = ++requestVersion
+        val resultLabel = findViewById<TextView>(R.id.tvMoodResults)
+        val container = findViewById<LinearLayout>(R.id.movieContainer)
+        container.removeAllViews()
+        if (searching && matches.isEmpty()) {
+            resultLabel.text = getString(R.string.mood_no_matches_hint)
+            return
         }
-        renderMovies(findViewById<LinearLayout>(R.id.movieContainer), movies)
+        val service = com.example.cinemood.network.MovieService(this)
+        resultLabel.setText(R.string.loading_recommendations)
+        movieWork({ service.discover(matches) }, { movies ->
+            if (version == requestVersion) {
+                val mode = getString(if (service.sampleMode) R.string.movie_source_sample else R.string.movie_source_live)
+                val summary = if (movies.isEmpty()) getString(R.string.mood_no_movies) else
+                    resources.getQuantityString(R.plurals.mood_recommendation_count, movies.size, movies.size)
+                resultLabel.text = getString(R.string.source_result, mode, summary)
+                renderMovies(container, movies)
+            }
+        }, { error -> if (version == requestVersion) resultLabel.text = getString(R.string.mood_retry, error) })
+    }
+
+    override fun onDestroy() {
+        debounceHandler.removeCallbacks(deferredSearch)
+        super.onDestroy()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
