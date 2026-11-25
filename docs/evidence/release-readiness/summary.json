@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-25",
+  "operator": "Codex, authorized by Stephen while Mark unavailable",
+  "environment": "Isolated source copy on same macOS machine; JDK25/SDK37; dependency cache reused",
+  "working_tree_base": "096b696",
+  "instrumentation": {
+    "passed": 40,
+    "skipped": 1,
+    "failed": 0,
+    "errors": 0,
+    "skip_reason": "Restart check requires separately executed save/verify stages"
+  },
+  "unit": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0
+  },
+  "lint": {
+    "debug": {
+      "errors": 0,
+      "warnings": 8
+    },
+    "release": {
+      "errors": 0,
+      "warnings": 8
+    }
+  },
+  "clean_build": "130 tasks executed, BUILD SUCCESSFUL",
+  "restart": {
+    "save": "Pass: real TMDB movie saved with watched status, rating and notes",
+    "process_boundary": "Instrumentation exited; target force-stopped; second instrumentation process started",
+    "verify": "Pass: token fingerprint, metadata, watched status, four-star review and notes persisted; test data cleaned"
+  },
+  "signed_release": {
+    "status": "Pass: 14 focused checks",
+    "sha256": "18d0985692f3383dd2567272bf27106ab3853dc3c9c48809503001b12114ee1a",
+    "evidence": "signed/RESULTS.md"
+  }
+}

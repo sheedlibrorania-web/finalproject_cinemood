@@ -1,0 +1,653 @@
+{
+  "date": "2026-11-25",
+  "operator": "Codex at Stephen request",
+  "source_head": "096b696c228d6564a704d1951e7dbf9b87565f36",
+  "working_tree_changes_included": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "702a357ab99ec4c485eeda2aaee55ae85532d28b71cf1dd4877e1f2205ce1d1a"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "873ff418bf56db6cc39b5c6a69daf1e7590c7fb806e58753563eb413ab35a729"
+    },
+    {
+      "path": "DATABASE_INTEGRATION.md",
+      "sha256": "cfab404bb4627b7464f16fd45765d8fbc4cf983985ed6d74f493c9c08fc3292b"
+    },
+    {
+      "path": "DATABASE_TEST_RESULTS.md",
+      "sha256": "1347c5695ab4f9d180ed2a882867055839878bf2cab16bc198e311aeb4074fb7"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a29a5ff2db0d8bfa120cb66407a9f1e0c41094dbd1110df0ae9e942d898a13b4"
+    },
+    {
+      "path": "TMDB_BUILD_SETUP.md",
+      "sha256": "37997d1f1473b627a82169d716e6fe3db1fbbe047a8c96fb935933e96d11c7d2"
+    },
+    {
+      "path": "app/.gitignore",
+      "sha256": "5c3174b74edc6f2b9e0743594b8bd3c7f31e4f4405758cc9872b3fe1de1d28b4"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "sha256": "27f830cda7ba12b23b87d2eb0a207907d41cadb1be4adc0b6064114b333e9437"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/AppFlowTest.kt",
+      "sha256": "99ec145fe66f19cb8f16168c19cff0555d3564aba8c9d2f2cb86196ad5fef18a"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/AutomaticLiveAccessTest.kt",
+      "sha256": "55b209a2a9174200e33155f994bf9d3ffbddc801c54be9fde105617a4243dd7f"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/DatabaseMigrationTest.kt",
+      "sha256": "dc0487bf0a86667cc8953ee5ecb6825e2c6731fd6c3a89b48b196075969275f6"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/DiscoveryScreenTest.kt",
+      "sha256": "6d4e110b4f0cba361cae7e1fa93398877688710d5a27fa5d4fc22e8c4fa2e179"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/DocumentationCaptureTest.kt",
+      "sha256": "c40efa02f8abdf89204e2f8569326688cb17a814ef3917404c5a6d9d39004bd2"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/LiveReadinessTest.kt",
+      "sha256": "a4a9b08b28ee85ea4f02c8bcd7427657ce5f1617141cec20dfe8312a06855cf0"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/RegistrationWhitespaceTest.kt",
+      "sha256": "c79ebdc7ffa27918452b66a76d3ddc3d85d731417d5c8ea335a4c562538876e2"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/ReleaseReadinessUiTest.kt",
+      "sha256": "68b78cfe2e9ba9316544bcdd0b9e2ef3845e2f4f204373cba1c53077aab4051c"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/TmdbClientTest.kt",
+      "sha256": "0020619f8f747bd87c7dc4d29711d2ca93814e1db5bf68a0c4eecb37ce3a90b6"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/TmdbHttpTest.kt",
+      "sha256": "b732eab7d469b144c5d865b15ee68f3efbecf12461041b190e26f0c0ebf43b57"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/TokenCleanupTest.kt",
+      "sha256": "103aefbfb49f370ffafbc5d52da3837cdeca6c8540729536efd64b20b27c8678"
+    },
+    {
+      "path": "app/src/androidTest/java/com/example/cinemood/data/DatabaseIntegrationTest.kt",
+      "sha256": "948c164ed31f64a1e4bb4a0b181f0389fc7b8da2c493a794da814aa7a8c7929a"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "sha256": "e41c38144bc93712c6fa057bfd278604931ebe4aa8095932d606fec3628df934"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/BaseActivity.kt",
+      "sha256": "5dc89b64877d3de17a662cd5605caf9d27ce90c45d648d9ba5f039ad589a3180"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/DashboardActivity.kt",
+      "sha256": "94efbc13e6bdda84b1b9d3ef1984d711e6251b08ddc664b4e8ad02ef45b96fc3"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/DemoStore.kt",
+      "sha256": "6bc344a4eaba4d621dc066d4313265ece657916c74dffc2b4f5c5e716fbc028c"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/JourneyActivity.kt",
+      "sha256": "c3aa013ea74b0a666c27a8f80a7c6a82c0911e8b608fd19d7f655bc25f4eb317"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/LoginActivity.kt",
+      "sha256": "55847334dbf4dbbd52dbb137a5394222a3acc12cbd73a479a69148fb282920d5"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/MoodActivity.kt",
+      "sha256": "094a5202a7460f5f0e9f54e0e57c36e0a5616b674c148267b20b41a2502e6c12"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/MoodSearch.kt",
+      "sha256": "d4863b5085ce76feb7a8a05854d840f3798157128d74bce803ce11f9d6735329"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/Movie.kt",
+      "sha256": "ad284a1cde3b04c798c5c00b2bb8df25fe3cb7198ce06c2f6dea3f8f093049bd"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/MovieDataSettingsActivity.kt",
+      "sha256": "5b059569bac2f135ef25b7f459fed0092d30ba52685bdc8d89e0363225a9caa3"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/MovieDetailsActivity.kt",
+      "sha256": "09258739028bd3388959694e2e86e353fdb664546f8ce5b6362c54f7a19519bc"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/PasswordVisibility.kt",
+      "sha256": "7a66c19b7f874339d731172de5e738a8cfe9add3907ae037b6b5f3e2144071ab"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/RegisterActivity.kt",
+      "sha256": "149c82a1a7e0900bccf5cba522635ab38418ce97119dd9c68a0c0535c814d4bf"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/SearchActivity.kt",
+      "sha256": "d8b31280d7342281ef5babb62771669afd10563d996480f21151fb1452e21c50"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/WatchlistActivity.kt",
+      "sha256": "10fc489bcbec2c796c373fdfdceb22be7a63f1ed8fe0ac514d94fd020a15d07c"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/data/CineMoodDbHelper.kt",
+      "sha256": "7520d533a9934b9e1c092329e343a53e0771112d51c72b75c5cac86779a7c31a"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/data/CineMoodRepository.kt",
+      "sha256": "92d1265c4193a626c4b40804d169b816256fa7e4b93c23a419e942a3f3d57c2c"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/data/PasswordPolicy.kt",
+      "sha256": "73f44518749a35304a62bf1dd81c844d12a3f75b70ad9a18393cf25fc51661a5"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/data/SessionManager.kt",
+      "sha256": "f94582f62155e9ffc266b6b9f88c8965535ef2c965e0e34a4fd53f7875b89042"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/network/PosterLoader.kt",
+      "sha256": "cfc268ea2c3dc3c8ca5138cfe3d30d774ee995fd6cd6ac7e82c6af0d1e639df8"
+    },
+    {
+      "path": "app/src/main/java/com/example/cinemood/network/TmdbClient.kt",
+      "sha256": "06fc429a957a3b4afa6ac9ad4061670c67b30b2ffbb6dffdf16deb101ad07e13"
+    },
+    {
+      "path": "app/src/main/res/animator/cm_button_motion.xml",
+      "sha256": "11b319e47466b05805f78dc74a35c275d828cdd9de6e7a4c810ab3c1ffc5be0a"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_backdrop.xml",
+      "sha256": "1cc6afe94ad99ea221f165ae3f1e10cd34342e522d8018670c745cde95e5a69f"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_button.xml",
+      "sha256": "0fccb302fde195a778a1c483846d80351ab6b731634e32082ff2beb69ad989d2"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_card.xml",
+      "sha256": "2a165730b1cc3b57efe5a34d51fa64756be7e968767cebd806ab5f25defe8c35"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_dropdown_background.xml",
+      "sha256": "4fced4e5fe5811f56aac46c86ebcb6ef420a6107e9224c198694ba816e539885"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_dropdown_option.xml",
+      "sha256": "9177186e2892e1082c7566bf31d4ee03e369d64708c53476ddf93fe6da377d91"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_dropdown_popup.xml",
+      "sha256": "136130d23d4c53b19c377704927f8d1d6aae09999269257d968c8063d2c517bd"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_hero.xml",
+      "sha256": "5c0a396726be06e83a55be0bc319ced01926082348958374c0c5238c7896045c"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_input.xml",
+      "sha256": "75875fb7bea38c05a7aaa63fbd0dca34af3a7724b4a483fa2268d7d51f7bc359"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_quiet.xml",
+      "sha256": "ada70f8f8d71299e38fad08ddaa72ec853b1357ef709cb802b140c481a6073a5"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_reel.xml",
+      "sha256": "6d4119f4baf599ac3c7b110bff31b03f1ac40eebe333a318e2c1c18937feea1f"
+    },
+    {
+      "path": "app/src/main/res/drawable/cm_secondary.xml",
+      "sha256": "c40582a4d72602be92d1d7adf5c48972411dad13def80e681c1781c3fd910f43"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_cm_chevron_down.xml",
+      "sha256": "88d248c4fcfa79c2d5764240e35983de44e71facd546c72f8f4da560cfb61477"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_background.xml",
+      "sha256": "bc8b2f98483d42afffc32d3d00c2e788cef57a43247050fdd7a362f84517aa07"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "sha256": "ee1592e31e3aa8aab2dfcc1b9afc18ec33ce42c91359e3b7cb8ae2b29dda8c0b"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_password_hide.xml",
+      "sha256": "68507890557a6512f860d0be99708adc85cfa0b102e57d0c3556864e1b853647"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_password_show.xml",
+      "sha256": "17e04531af45c95645ef5646c20927cdedcaab326674ff7320130772d753aa1f"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_search.xml",
+      "sha256": "946174973767a7ce6e7815ba822bb61c5d15cb823c4786a1a3b8a1ad18099240"
+    },
+    {
+      "path": "app/src/main/res/drawable/tmdb_logo.xml",
+      "sha256": "0e7f42f3ea9b4c5e9e86ef38b702382aba9ee400c17bd82ca27c5c11d42ae579"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_dashboard.xml",
+      "sha256": "c7c458cf51af0d4ae59b8db35a0417928b31e7fef7941be1cd593abb857626c6"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_journey.xml",
+      "sha256": "db75c70bc4989db7731e6feaf3d5e38f2aaa0f283847da7895e842a8e7d62fb4"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_login.xml",
+      "sha256": "5f9299fb9760b02b5a20fec785fafa6295a9d28635ec1b0388af0184d59c30cd"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_mood.xml",
+      "sha256": "f60f7e31342025f34faae47a1f180e0d3328009f71f68f3d24b2d55ec1086094"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_movie_data_settings.xml",
+      "sha256": "c82d434dbedd4d3880e1dcc212220d9134c6c29a9c470f4244d58cc8a77f1583"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_movie_details.xml",
+      "sha256": "4010c978a76fd3ab19614841751674556ecd4d11918df4234435705de1f85a9c"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_register.xml",
+      "sha256": "a0c89e2e5a2c11cbd7ee443c3aacf560aebf5cb7e99f703571bdbba076fbea68"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_search.xml",
+      "sha256": "a9352e2dff8dec0f5a502688c847eac3163499dcd817eceee6c16ee790ac07eb"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_watchlist.xml",
+      "sha256": "81e602de66d5b69581f4b78b9ce15da1c64dac5c66fa9bfaa146c4f38bc3a9c6"
+    },
+    {
+      "path": "app/src/main/res/layout/item_movie.xml",
+      "sha256": "a3519749538825c945d3319524cca471db64a3f80f954ebd9be68687ca4e1aa9"
+    },
+    {
+      "path": "app/src/main/res/layout/item_watchlist_option.xml",
+      "sha256": "71ebaa8a5cf9cdc9a87107b67755306f30f5864b210dcdf6578675e10762c2c0"
+    },
+    {
+      "path": "app/src/main/res/layout/item_watchlist_selection.xml",
+      "sha256": "66d78fdc0ca5597395fb63e6a02e473a23f6c7f0103307c4954c9df8b9a283fc"
+    },
+    {
+      "path": "app/src/main/res/layout/view_watchlist_controls.xml",
+      "sha256": "2c15694ba78be4e19daad4a7a187bf422ecbbdb480b239e2c425b79182eda797"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "sha256": "d552733f41cabf9a08642e1cdc4d4151a6d832b791b168fa1a5935b4b05b4de6"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "sha256": "d552733f41cabf9a08642e1cdc4d4151a6d832b791b168fa1a5935b4b05b4de6"
+    },
+    {
+      "path": "app/src/main/res/values-v27/cm_styles.xml",
+      "sha256": "ceed47790e494996ecd340467b0ed47f275a30ad23735dbee6b20ec6b6299ced"
+    },
+    {
+      "path": "app/src/main/res/values/cm_styles.xml",
+      "sha256": "5de9c3bb2acff0726be9f2d9bebf86dcd3575968f8cb8230baf92a7f0608cf07"
+    },
+    {
+      "path": "app/src/main/res/values/colors.xml",
+      "sha256": "e5c0a7d0233a03bc8573d3b7e1c3e57e538737910df29e11827d7bdb40721831"
+    },
+    {
+      "path": "app/src/main/res/values/data_strings.xml",
+      "sha256": "351b313073f45b67c05ba1f2dd4fcb9261fa7ac89ffbca82788eeeb6680853a9"
+    },
+    {
+      "path": "app/src/main/res/values/mood_strings.xml",
+      "sha256": "d9e39aebd121dd241d5008da8fe1ad9156ae1ce9f9394e23ce7fc5e258077e16"
+    },
+    {
+      "path": "app/src/main/res/values/password_strings.xml",
+      "sha256": "106aec2d20c3655da74b3966da33fd3912cb31a120f1e9b3e1e4a6fbc928bff6"
+    },
+    {
+      "path": "app/src/main/res/values/ui_strings.xml",
+      "sha256": "8f0d04489312dbd33396afccb070dc27a5e0b703590126050c7216647d27e8a9"
+    },
+    {
+      "path": "app/src/main/res/values/watchlist_styles.xml",
+      "sha256": "3b3ce2a7fab59901c695f55236b3d0bfd63b79b1c87db87a08a2cba5d46a13b8"
+    },
+    {
+      "path": "app/src/main/res/xml/data_extraction_rules.xml",
+      "sha256": "834c6e29e82b623ad6151948b733ce06f24c5e21b05230ec0181ac967a84d1fa"
+    },
+    {
+      "path": "app/src/test/java/com/example/cinemood/MoodSearchTest.kt",
+      "sha256": "466d372075502520111dca8560ef4a0a6b520b82efe8878a7ca6773ee5e74452"
+    },
+    {
+      "path": "app/src/test/java/com/example/cinemood/PasswordPolicyTest.kt",
+      "sha256": "68dfbea50f2b0bc5de6ab0a68882f76c8674da326eb2dddf14d08b09ccf65212"
+    },
+    {
+      "path": "build.gradle.kts",
+      "sha256": "5dad2d59c54beb7d7801e06e1c795456d1bea58c0ccbeddfce159cd8f58c2fa8"
+    },
+    {
+      "path": "docs/API_DESIGN_VERIFICATION.md",
+      "sha256": "6abf88613093308418fa10a2ae72adf6336dfa931ddfe50756ada45a505ba9e5"
+    },
+    {
+      "path": "docs/API_DOCUMENTATION.md",
+      "sha256": "4ff5dec59c567a6c18bccee741baf8b17b5cb112f7f661a22a3755755dcd899d"
+    },
+    {
+      "path": "docs/CLEAN_SETUP_CHECK.md",
+      "sha256": "d84a4a55a3bce72a9a2776bd18c24f57ac10ae9aaff96b73aab6d38584bfa8a1"
+    },
+    {
+      "path": "docs/CLEAN_SETUP_RECONCILIATION.md",
+      "sha256": "0d076dcf72935553bf39e172048d731c232e4a55794fb62501017779030ee59a"
+    },
+    {
+      "path": "docs/CS0053_COMPLIANCE.md",
+      "sha256": "6920b3e5583c2bbb2dda6522e44ef95a2509341fb4619c998db187bff1dcb344"
+    },
+    {
+      "path": "docs/DESIGN_PATTERNS.md",
+      "sha256": "a4075f2305b2ca24233611722bb0944bd5b62bc199586a3660d0d5864f3ed914"
+    },
+    {
+      "path": "docs/DEVELOPMENT_TOOLS.md",
+      "sha256": "c524daffed270fe765002e9e4edb7998b0aab82ec02ae1ab46692f76f77ba594"
+    },
+    {
+      "path": "docs/SETUP.md",
+      "sha256": "fc8aedf61e13eba3da62f7d660646d711216b24e63f2070df3e64c800bd566ea"
+    },
+    {
+      "path": "docs/SRS.md",
+      "sha256": "5bef36dd544371b42339e2b27de3a4463729c7f54f7a3099d58149f845dbb38f"
+    },
+    {
+      "path": "docs/TECHNICAL_DESIGN.md",
+      "sha256": "6d522e18b0a996bcfdfaf115a51c8fabd000981d0ac3f459eaa1fe06976ffaa7"
+    },
+    {
+      "path": "docs/TEST_CASES.csv",
+      "sha256": "4ef5671a08c0f56ec20654f9fb3c4b53f049a955431d7127044619e065aed5ee"
+    },
+    {
+      "path": "docs/TEST_REPORT.md",
+      "sha256": "fdb0e95a48ac1cae0f680223c73c21a642f4ba98a8dd97d9ebdd80f4a8acc1e0"
+    },
+    {
+      "path": "docs/USER_MANUAL.md",
+      "sha256": "05c2b28eeca8d7a03900d86279cc36f0b585eda69f5e75b9a59dc2ee6e8a2203"
+    },
+    {
+      "path": "docs/assets/README.md",
+      "sha256": "6422cf5fc54bab73beec1175ea053343efacb42cecaacccb54820a51969b2283"
+    },
+    {
+      "path": "docs/assets/tmdb-logo-official.svg",
+      "sha256": "784c574fbfbcfac96d62f48110a5ec7d550cb416a1cde05b05d9f7960c007904"
+    },
+    {
+      "path": "docs/evidence/api-design/git-history.txt",
+      "sha256": "18ded696a8f838e9686a1a2e89ca53d91b4509864a75437e39f32fc60d6aee81"
+    },
+    {
+      "path": "docs/evidence/api-design/http-check.log",
+      "sha256": "e3286fff59ef285ae00acf584446db5345bea148ef5ac81b3b69c4489858d810"
+    },
+    {
+      "path": "docs/evidence/api-design/http-results.json",
+      "sha256": "6b4cbdec83e3c6c8a7a5502fa51abfcf88e8fac18b592623a6eb528b7188d427"
+    },
+    {
+      "path": "docs/evidence/api-design/live-release-check.log",
+      "sha256": "a0883dc4fc33f273dd2181ae2f5678d28c3576e5ae6d59377d1b53a4e226c0c5"
+    },
+    {
+      "path": "docs/evidence/api-design/live-results.json",
+      "sha256": "ced4a4e3011527da07b75142052a440a04e9c36a58740f2113a262e5baba8847"
+    },
+    {
+      "path": "docs/evidence/api-design/parser-check.log",
+      "sha256": "8ed8ab73546a6bef1d09ce6098762f76d6543701a4a21cd7b930de6988d83c6f"
+    },
+    {
+      "path": "docs/evidence/api-design/parser-results.json",
+      "sha256": "4935942ef6c295890a6c4cd689b0b04cc99f7b14cfb6a3efc09caa4958187095"
+    },
+    {
+      "path": "docs/evidence/api-design/repository-check.log",
+      "sha256": "508b28065250a59a2540f7739111dceed846de736bd053d7af3385333cde5219"
+    },
+    {
+      "path": "docs/evidence/api-design/repository-results.json",
+      "sha256": "cd587aff5d7c691f5c70138052a1c2ef0992c5fd78700cd2d5d1aaca6cac9e38"
+    },
+    {
+      "path": "docs/evidence/api-design/test-results.csv",
+      "sha256": "ffb8531affd25d71819aa97c10c873b46a6735baabf211f00634e1d32ca600f7"
+    },
+    {
+      "path": "docs/evidence/clean-setup/received/CLEAN_SETUP_RESULTS.md",
+      "sha256": "69b640f9383a5a48d4fcf49ed98926023ab6f5d9f1be792bb1a13f39e4af7ec9"
+    },
+    {
+      "path": "docs/evidence/clean-setup/received/README.md",
+      "sha256": "780d10e9a3cf856b8a5b3d53d1d1fe2538188897e1ae030244c061bd5c11fca2"
+    },
+    {
+      "path": "docs/evidence/cs0053/SCREENSHOTS.md",
+      "sha256": "26800392ddb377a32f23aebe62147d4cfbc38a677530506d9be0113ea1551d5d"
+    },
+    {
+      "path": "docs/evidence/cs0053/android-studio-environment.png",
+      "sha256": "8230f15b869ab101054305231264a2a4c4b146d8e0571e43f578ce9df4f54575"
+    },
+    {
+      "path": "docs/evidence/cs0053/android-studio-version.png",
+      "sha256": "5e77d6f56e7dd03eade4e8cad824f23a37f72fa17b166724e877dd847de464e6"
+    },
+    {
+      "path": "docs/evidence/cs0053/android-studio.txt",
+      "sha256": "e20a3534b13d704d2c411268e70f8cc0fd65d2cf6e57a54efb48954293e43b0f"
+    },
+    {
+      "path": "docs/evidence/cs0053/code-style-settings.png",
+      "sha256": "2dcfc950e94f9a9a8777b649a28c57b3ce3af7383040355cfae178558466a161"
+    },
+    {
+      "path": "docs/evidence/cs0053/debugger-breakpoint.png",
+      "sha256": "be4b77a4ffc6068e81cdba2f6fc646162e3052fd44eae76d29065fad61f14a73"
+    },
+    {
+      "path": "docs/evidence/cs0053/debugger-validation.png",
+      "sha256": "1d0dfdfa74daebab27ec31c301fc25eb602f4249ea17aa5e0ccb852a2549558c"
+    },
+    {
+      "path": "docs/evidence/cs0053/emulator-login.png",
+      "sha256": "d42be8a914fdf4f85231812f7f9689b7b3a1f7af20eda90ae15498907dd1cdd6"
+    },
+    {
+      "path": "docs/evidence/cs0053/formatter-after.png",
+      "sha256": "1a853b48d98557df90308d7d7644cdbfbd88d27514fbd56f7ae238c6f3a057e3"
+    },
+    {
+      "path": "docs/evidence/cs0053/formatter-before.png",
+      "sha256": "29d415942a91e57fa4dc163d3f71124376b6e643ab0e9951f589811bc71a9298"
+    },
+    {
+      "path": "docs/evidence/cs0053/git-branches.txt",
+      "sha256": "7c3ef96a93156ba57da827d28a739b7b422a4b49a2f0c28dfe3039dba8a92440"
+    },
+    {
+      "path": "docs/evidence/cs0053/git-history.png",
+      "sha256": "f6cc3fa962393b2beab6be4c8f9d898797c3d1c75f8a147e400417d39c11b362"
+    },
+    {
+      "path": "docs/evidence/cs0053/git-history.txt",
+      "sha256": "722f9fd1b4d00780e48d98e9399814e9ad91c80bfd84558fb8d8241420c6ee7b"
+    },
+    {
+      "path": "docs/evidence/cs0053/gradle-verification.txt",
+      "sha256": "c118d540a9b6131073f9c2f78d75f07d23bbd91706a00e9e02bce33d659e6633"
+    },
+    {
+      "path": "docs/evidence/cs0053/ide-analysis.txt",
+      "sha256": "ba75dbc6f5839e48864175edc2511de5bbc902ae3c549cf308ace1f638e135e8"
+    },
+    {
+      "path": "docs/evidence/cs0053/verification-summary.json",
+      "sha256": "65d12ecfe2156fa3745f3bad6931da985118287c5c9401e6560cc082f0716ac2"
+    },
+    {
+      "path": "docs/evidence/final-review/01-login.png",
+      "sha256": "7969e044d861157f90d065fcfd2d910511be5c6d962bf67914a1d8bcb090bfe5"
+    },
+    {
+      "path": "docs/evidence/final-review/02-register.png",
+      "sha256": "e68411deb5dbe14d83a7962674981b245520cd041b4a557c8148c0629870a305"
+    },
+    {
+      "path": "docs/evidence/final-review/03-dashboard.png",
+      "sha256": "4bc115f1ce398bec220457284c8f4b4cb1e2f33a4a0e262f44017be4da82c97a"
+    },
+    {
+      "path": "docs/evidence/final-review/04-search.png",
+      "sha256": "cc4e1bcee58f1e6bb2b54f3607f9e37597c1268a2fe964faf771bd1404a3572c"
+    },
+    {
+      "path": "docs/evidence/final-review/05-mood.png",
+      "sha256": "fb8888fbdacbed26b0cf921487a12b043e3e59a3b8a1cd26a449512adf3b4471"
+    },
+    {
+      "path": "docs/evidence/final-review/05b-mood-results.png",
+      "sha256": "4a882f9bcb948cf15222bc4301583b3a373e099f2e8dc0b1bae2d9fc28222b0e"
+    },
+    {
+      "path": "docs/evidence/final-review/06-watchlist.png",
+      "sha256": "2b52326e6b93707fe7b4f6285e1666b35921a778872363db63a8a1aa38975068"
+    },
+    {
+      "path": "docs/evidence/final-review/07-details.png",
+      "sha256": "c20e279635296ff69b1c9780e3312af6c181aaf43b7d7641c3341635c3e29ff3"
+    },
+    {
+      "path": "docs/evidence/final-review/08-review.png",
+      "sha256": "e8de63b0b83029b83dfa192748fb66e354292f41fee42bac28ba2e7bc10d7e12"
+    },
+    {
+      "path": "docs/evidence/final-review/09-remove-confirmation.png",
+      "sha256": "593cb212e3d43d851c62b1471cfd98725bde4325fad9070b1dfaeb28a77c0473"
+    },
+    {
+      "path": "docs/evidence/final-review/10-about-credits.png",
+      "sha256": "9fa25ba6d03f12ab6ed7f0660b73f6e1c9f4874483f453def9d6049ed261191f"
+    },
+    {
+      "path": "docs/evidence/final-review/SCREENSHOTS.md",
+      "sha256": "7bb702a696b762b078f47b50d050ea358f23267f1c06a791a2cdba01964122aa"
+    },
+    {
+      "path": "docs/evidence/final-review/build-check.log",
+      "sha256": "aeadb54d229a392dafc549cc76caa51e1773b53b67530f670baaaeff1990f6a8"
+    },
+    {
+      "path": "docs/evidence/final-review/capture-build.log",
+      "sha256": "6003b8e8d71804d85c370b125bb708bb873fa584793c33a470e3ad2dbda385e7"
+    },
+    {
+      "path": "docs/evidence/final-review/capture-final-build.log",
+      "sha256": "811d3b2f310491c89783da466b6201c79faba161e9d0e268d933b4a4cf3d8ed0"
+    },
+    {
+      "path": "docs/evidence/final-review/capture-final-check.log",
+      "sha256": "50386b7dd7ca6b199210254d11271a87724e34ce092b41f244bd5216d4228d91"
+    },
+    {
+      "path": "docs/evidence/final-review/capture-iteration.log",
+      "sha256": "f1a7c22e68bfbe17da92e344e9496786d8d24bbdc6adc03871150ba7a26210d7"
+    },
+    {
+      "path": "docs/evidence/final-review/final-lint-check.log",
+      "sha256": "92570cba3e0379c69e491ebca5064d85ff8390649de4e6d53a7fa50d271987a1"
+    },
+    {
+      "path": "docs/evidence/final-review/instrumentation-check.log",
+      "sha256": "7cda47c885036f28f0ade0b04f921962c5d56a103e61a9970bb2fc7afea0bf3f"
+    },
+    {
+      "path": "docs/evidence/final-review/summary.json",
+      "sha256": "4c4c0c8747f7f1d4f3f7042e0345666a2ff9a3d524512035e4649a0ef47789bc"
+    },
+    {
+      "path": "docs/quality/instrumentation-results.csv",
+      "sha256": "a8cef450dd70b2898b317abc3c408dc5587af6dd6d00dbf79c83cb8b454b3efa"
+    },
+    {
+      "path": "docs/quality/pre-push-review.md",
+      "sha256": "751cb449cbe16eb2f490452e1daf7c0a9378b83ebba1e26f8fb7731e67a0be8d"
+    },
+    {
+      "path": "gradle.properties",
+      "sha256": "cf774135f23cd1e6c054168ce772e24140800347f95b29819744c96f97e4ef26"
+    },
+    {
+      "path": "gradle/gradle-daemon-jvm.properties",
+      "sha256": "6c13aa5ba36690ccfbbb25a8807d01d98c15833e446d7ae82ddc726472cb8ef7"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "sha256": "c4fdc700b1c7922f72fc2605e2f5754d89287d8b60511cf6b95913d4b20dc065"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "sha256": "76805e32c009c0cf0dd5d206bddc9fb22ea42e84db904b764f3047de095493f3"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "15649a6b352de87551f859d67bbb9b02263bf38c22299a27f43d4a1ee56e4149"
+    },
+    {
+      "path": "gradlew",
+      "sha256": "3238afb2aed5cb16eb7d6718077e7138059108f007b54179e9cc157c5a6e0e89"
+    },
+    {
+      "path": "gradlew.bat",
+      "sha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "sha256": "01f9d63a0068c8cd6a6a6fed2c2d22290f64d21299cec83eae0f1199bef8ff16"
+    },
+    {
+      "path": "tmdb.properties.example",
+      "sha256": "c3b337267ff17fbbd276092c97c58f7b04e9291951208e8e0096fc81643feebf"
+    }
+  ],
+  "limitations": "Isolated source copy on same Mac using existing Gradle cache; not a separate-person Windows test. Local token/SDK files provided separately and excluded from this manifest."
+}

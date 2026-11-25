@@ -1,0 +1,18 @@
+
+com.example.cinemood.AppFlowTest:.
+com.example.cinemood.AutomaticLiveAccessTest:.
+com.example.cinemood.DatabaseMigrationTest:.
+com.example.cinemood.DiscoveryScreenTest:.
+com.example.cinemood.DocumentationCaptureTest:.
+com.example.cinemood.LiveReadinessTest:....
+com.example.cinemood.RegistrationWhitespaceTest:.
+com.example.cinemood.TmdbClientTest:.......
+com.example.cinemood.TmdbHttpTest:..........
+com.example.cinemood.TokenCleanupTest:.
+com.example.cinemood.data.DatabaseIntegrationTest:............
+
+Time: 79.55
+
+OK (40 tests)
+
+

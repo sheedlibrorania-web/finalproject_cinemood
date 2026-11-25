@@ -106,3 +106,11 @@ Use focused branches, meaningful commits under each contributor’s own identity
 - [Technical design](docs/TECHNICAL_DESIGN.md) — architecture, data flow, schema and decisions.
 - [Repository pattern](docs/DESIGN_PATTERNS.md) — source walkthrough, diagram, alternatives and behavior evidence.
 - [API/design verification](docs/API_DESIGN_VERIFICATION.md) — 30 executed instrumentation checks, live search and release-assembly results, with limitations.
+
+## User guide and pre-release quality
+
+- [User manual](docs/USER_MANUAL.md) — installation, feature procedures, actual screenshots and troubleshooting.
+- [Test and quality report](docs/TEST_REPORT.md) — current 40-method instrumentation result, SRS traceability, known limits and signed-release acceptance checklist.
+- [Test-case matrix](docs/TEST_CASES.csv) — expected outcomes and actual status by requirement.
+- [Mark’s clean-setup record](docs/CLEAN_SETUP_CHECK.md) — pending actual independent results.
+- [Official TMDB asset provenance](docs/assets/README.md).

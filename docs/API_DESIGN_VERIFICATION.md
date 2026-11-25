@@ -55,7 +55,7 @@ Use Android Studio’s bundled Gradle JDK as explained in [SETUP.md](SETUP.md); 
 
 - Mark: verify endpoint parameters, mood rules, real-versus-fixture evidence, source diagrams and Repository explanation; confirm original authorship and approve the PR only after checking it.
 - Both: capture final signed-APK acceptance evidence and perform the independent setup. This task does not rerun all screen flows, test API 24, measure performance, or validate release signing.
-- Attribution gap: About has text attribution but no approved TMDB logo in the inspected XML. Review/add the approved logo in a separate agreed UI change and recheck before final release. See the linked provider guidance in [API_DOCUMENTATION.md](API_DOCUMENTATION.md).
+- Historical attribution finding: About lacked an approved logo at this report’s baseline. The subsequent authorized logo addition and current evidence are recorded in [TEST_REPORT.md](TEST_REPORT.md); final signed-release acceptance remains pending.
 - Broader course gaps (history, Issue links, final manuals/release) remain in [CS0053_COMPLIANCE.md](CS0053_COMPLIANCE.md).
 
 No commit, push, review request or merge was performed by Codex in this task. No real token is included in these reports or fixtures. Students must understand and review AI-assisted implementation/tests/documentation.

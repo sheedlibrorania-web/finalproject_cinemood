@@ -1,0 +1,15 @@
+096b696 | Josh | Clean unused metadata from TMDB reference SVG
+20fd337 | Josh | Add user manual and consolidated pre-release test report
+0c4a355 | Josh | Add official TMDB attribution logo and screen capture check
+e060a21 | Josh | Merge pull request #7 from sheedlibrorania-web/docs/api-and-design
+394e7e7 | Josh | Document CineMood API and application design
+24d3f7c | Josh | Test TMDB HTTP errors and resource cleanup
+7ff352d | Josh | Merge pull request #6 from sheedlibrorania-web/docs/cs0053-requirements
+1a039d6 | Josh | Add CS0053 requirements and development-tool evidence
+7741433 | Josh | Merge pull request #2 from sheedlibrorania-web/docs/cs0053-setup
+3216c6a | Josh | Document CineMood setup and CS0053 development baseline
+2cbf64a | Josh | Merge pull request #1 from sheedlibrorania-web/baseline/cs0053-start
+1807e53 | Josh | Fix Android theme compatibility and UI resource warnings
+e958f8d | Josh | Preserve existing CineMood application as CS0053 starting baseline
+090c4af | Josh | Exclude private signing files, build outputs, and local IDE settings
+5fe93ef | Mark | v1-CineMood

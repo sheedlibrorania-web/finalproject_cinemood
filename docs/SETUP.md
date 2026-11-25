@@ -7,7 +7,7 @@
 - Internet access for the first Gradle dependency download and live TMDB search/posters.
 - An authorized TMDB API Read Access Token for live discovery and release packaging.
 
-Checked-in versions: Android Gradle Plugin 9.4.1, Gradle wrapper 9.6.0, compile/target SDK 37, minimum SDK 24, app version 1.0 (version code 1). Java source/target compatibility is 11; this is not an instruction to run Gradle on JDK 11. Do not upgrade the wrapper or dependencies merely to resolve a local setup mismatch.
+Checked-in versions: Android Gradle Plugin 9.4.1, Gradle wrapper 9.6.0, compile/target SDK 37, minimum SDK 24, app version 1.0 (version code 1). The checked-in `gradle/gradle-daemon-jvm.properties` requests Gradle daemon toolchain version **25**. Use the bundled JDK 25 from this Android Studio baseline or ensure Gradle can provision that requested toolchain. Java source/target compatibility is 11; this is not an instruction to run Gradle on JDK 11. Do not upgrade the wrapper or dependencies merely to resolve a local setup mismatch.
 
 ## Open a clean checkout
 
