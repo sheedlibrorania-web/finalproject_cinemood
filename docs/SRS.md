@@ -2,8 +2,6 @@
 
 Course: CS0053, Programming Tools and Techniques. Team: Stephen Josh Canete and Mark Jayson D. Cadano. Version: 1.0 review draft, November 25, 2026. Application baseline: `7741433` (merged documentation PR #2).
 
-**Approval status:** Stephen reports instructor approval to reuse the Kotlin/Android CineMood application from CS0011. This SRS documents the existing baseline retrospectively; it is not evidence that this document was approved before development. Stephen now reports instructor approval for the Android Studio tool substitution (November 25, 2026); the original approval record is not attached. Separate approval of this retrospective SRS has not been explicitly established. Source of course requirements: the professor’s CS0053 project manual supplied by Stephen in the project conversation.
-
 ## 1. Problem, objectives and users
 
 Movie viewers need a convenient way to find a movie suited to their current interests and remember what they plan to watch or have already watched. Search results alone do not preserve personal viewing status, ratings or notes.
