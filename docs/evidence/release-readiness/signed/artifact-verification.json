@@ -1,0 +1,11 @@
+{
+  "apk_sha256": "18d0985692f3383dd2567272bf27106ab3853dc3c9c48809503001b12114ee1a",
+  "size_bytes": 5680626,
+  "application_id": "com.example.cinemood",
+  "version_name": "1.0",
+  "version_code": 1,
+  "min_sdk": 24,
+  "target_sdk": 37,
+  "non_signature_entries_match_isolated_release": true,
+  "differences": []
+}

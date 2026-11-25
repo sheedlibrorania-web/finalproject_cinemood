@@ -1,6 +1,10 @@
 # CineMood testing and quality report
 
-CS0053 review edition, November 25, 2026. Team: Stephen Josh Canete and Mark Jayson D. Cadano. This is the consolidated pre-release report; it does **not** claim 100% final acceptance. Mark’s independent source setup and the current final team-signed APK are pending.
+> **Latest verification update — November 25, 2026:** The current isolated source build passed all 130 executed build tasks, 10 fresh unit tests, and debug/release lint (zero errors, eight warnings each). The updated full instrumentation suite reported 40 passed, one explicitly skipped restart checkpoint, zero failures; its separate save/force-stop/verify stages also passed. Sorting and compact 1.5× text checks were executed separately. The exact final team-signed APK subsequently passed 14 focused acceptance checks, including automatic live search, mood switching, review persistence, removal and logout. See [current evidence](evidence/release-readiness/summary.json) and [signed APK acceptance](evidence/release-readiness/signed/RESULTS.md).
+>
+> The original report below is retained as a historical pre-release record. Its pending clean-build, sorting, restart and signed-APK items are superseded by the linked evidence; remaining broad device/accessibility coverage and Git/submission tasks are not claimed complete. The replacement clean build was Codex-operated on the same Mac with cached dependencies, not an independent Windows retest by Mark.
+
+CS0053 review edition, November 25, 2026. Team: Stephen Josh Canete and Mark Jayson D. Cadano. This is the consolidated pre-release report; it does **not** claim 100% final acceptance. An external Windows review has been received through Mark, but tested an unidentified older ZIP without a live token and did not pass cleanly. Latest-checkout verification and the current final team-signed APK remain pending.
 
 ## 1. Scope, baseline and environment
 
@@ -110,3 +114,9 @@ Screenshot capture iteration/fixes are recorded in the figure index. They affect
 - [ ] Update this report with actual signed-artifact outcomes, then create final release tag/package.
 
 Quality assessment: no failure in the recorded 40-method debug run and no build/lint errors. The project is ready for peer review and remaining acceptance work; it is not yet declared fully release-accepted. Mark’s setup is not passed by assumption. See [CS0053 compliance](CS0053_COMPLIANCE.md) for non-test submission gaps.
+
+## Received external Windows review — November 25, 2026
+
+The [received review](evidence/clean-setup/received/CLEAN_SETUP_RESULTS.md) reports a successful debug build, 10 passing unit tests, lint failure (1 error/115 warnings), and 29 instrumentation methods (26 reported pass, 2 fail, 1 skip). Its source had no Git identity and lacked changes present in this branch; do not combine these counts with the current 40-method run or relabel them as a current-source failure/pass. The operator is identified as Codex for the requester, not Mark’s personal execution. Raw referenced evidence was not supplied.
+
+[Reconciliation](CLEAN_SETUP_RECONCILIATION.md) records already-addressed findings and unresolved checks. The status-bar scrolling overlap is also visible in our current [review screenshot](evidence/final-review/08-review.png), so it is a confirmed outstanding visual defect, not dismissed as stale ZIP behavior. Watchlist singular-count copy is also still open. Release readiness remains conditional on fixes/retests and latest-source live/clean-setup acceptance.
