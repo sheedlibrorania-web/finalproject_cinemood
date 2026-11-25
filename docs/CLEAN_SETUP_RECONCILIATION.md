@@ -1,6 +1,6 @@
 # Returned clean-setup review — reconciliation
 
-Reviewed November 25, 2026 against current local branch `docs/final-manual-and-testing`, HEAD `096b696`. The [received report](evidence/clean-setup/received/CLEAN_SETUP_RESULTS.md) is preserved verbatim. No new build/device execution was performed during this reconciliation.
+Reviewed November 25, 2026 against current local branch `docs/final-manual-and-testing`, HEAD `096b696`. The [received report](evidence/clean-setup/received/CLEAN_SETUP_RESULTS.md.txt) is preserved verbatim. No new build/device execution was performed during this reconciliation.
 
 ## Identity and scope
 

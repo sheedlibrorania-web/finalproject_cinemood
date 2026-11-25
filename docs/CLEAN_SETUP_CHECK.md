@@ -1,6 +1,6 @@
 # Independent clean-setup check — received results and latest-source retest
 
-Status: **returned review received; not a clean pass; latest GitHub checkout verification still pending**. See [reconciliation](CLEAN_SETUP_RECONCILIATION.md) and [original received report](evidence/clean-setup/received/CLEAN_SETUP_RESULTS.md).
+Status: **returned review received; not a clean pass; latest GitHub checkout verification still pending**. See [reconciliation](CLEAN_SETUP_RECONCILIATION.md) and [original received report](evidence/clean-setup/received/CLEAN_SETUP_RESULTS.md.txt).
 
 ## Received review identity
 
